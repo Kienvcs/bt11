@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8">
-  <meta name="viewport"content="width=device-width,intial-scale=1.0">
-  <title>bai tap 11</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap 11 - Trang Đăng Kí</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      .form-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 400px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input[type="text"], input[type="email"], input[type="tel"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #5cb85c;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      input[type="submit"]:hover {
+        background-color: #4cae4c;
+      }
+    </style>
   </head>
-    <body>
-       <h2>Trang Đăng Kí Tham Gia Nhóm</h2>
-     <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1f25IoFx0JegsiZYWsjtmb?utm_source=generator" width="400" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen;loading="lazy"></iframe>
-     <br>
-      <lable for="dangki">Email đăng kí:</lable>
-      <input type="text" placeholder="gmail.com"></input>
-      <br>
-      <br>
-      <lable for="dangki">số điện thoại:  </lable>
-      <input type="text" placeholder="0987654321"></input>
+  <body>
+    <div class="form-container">
+      <h2>Trang Đăng Kí Tham Gia Nhóm</h2>
+      
+      <p style="text-align: center; padding: px;">
+        <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/track/1f25IoFx0JegsiZYWsjtmb?utm_source=generator" width="400" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen;loading="lazy"></iframe> 
+      </p>
+      
+      <form action="/submit-registration" method="post">
+      
+        <label for="email">Email đăng kí:</label>
+        <input type="email" id="email" name="email" placeholder="@gmail.com">
+        
+        <label for="phone">Số điện thoại:</label>
+        <input type="tel" id="phone" name="phone" placeholder="0987654321" " title="Số điện thoại 10 chữ số">
+        
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" placeholder="Tối thiểu 6 ký tự" required>
+  <input type="submit" value="Đăng Kí Ngay">
+        
+      </form>
+    </div>
+  </body>
+</html>
